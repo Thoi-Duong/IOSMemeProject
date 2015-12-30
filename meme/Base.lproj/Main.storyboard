@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,49 +18,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CmD-hA-mqw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CmD-hA-mqw">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="39" y="56" width="320" height="457"/>
-                                </variation>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCh-AO-3Gd">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <animations/>
                                 <items>
-                                    <barButtonItem title="Pick" id="Yiu-5g-YR1">
+                                    <barButtonItem title="pickFromAlbum" id="Yiu-5g-YR1">
                                         <connections>
                                             <action selector="PickAnImage:" destination="BYZ-38-t0r" id="4C3-tF-fHq"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="pickFromCamera" id="5mq-0i-Til">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="OsI-ud-3AD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="LoadImage" id="FTG-Bw-PEp">
+                                        <connections>
+                                            <action selector="loadImage:" destination="BYZ-38-t0r" id="6g7-gj-wkh"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="50"/>
-                                </variation>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="botton text" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tsl-qP-kRR">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="188" y="400" width="25" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Top Text" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PTx-qP-ZUE">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="yes" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="188" y="110" width="25" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CmD-hA-mqw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="0r2-Kl-DCD"/>
                             <constraint firstItem="CmD-hA-mqw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="0yu-Io-Tua"/>
+                            <constraint firstItem="tsl-qP-kRR" firstAttribute="top" secondItem="CmD-hA-mqw" secondAttribute="bottom" constant="-100" id="4dW-c5-5bc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CmD-hA-mqw" secondAttribute="bottom" constant="100" id="Bbj-Qe-gEu"/>
                             <constraint firstItem="LCh-AO-3Gd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FKB-Bl-4gC"/>
                             <constraint firstItem="LCh-AO-3Gd" firstAttribute="top" secondItem="CmD-hA-mqw" secondAttribute="bottom" constant="50" id="LaG-Ke-5qo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LCh-AO-3Gd" secondAttribute="trailing" id="MRl-IQ-N6y"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LCh-AO-3Gd" secondAttribute="bottom" id="NiZ-as-bOY"/>
+                            <constraint firstItem="CmD-hA-mqw" firstAttribute="top" secondItem="PTx-qP-ZUE" secondAttribute="bottom" constant="-100" id="WOc-AY-Ibi"/>
+                            <constraint firstItem="tsl-qP-kRR" firstAttribute="centerX" secondItem="CmD-hA-mqw" secondAttribute="centerX" id="fcc-h5-UnB"/>
+                            <constraint firstItem="PTx-qP-ZUE" firstAttribute="centerX" secondItem="CmD-hA-mqw" secondAttribute="centerX" id="nIm-SQ-fsl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CmD-hA-mqw" secondAttribute="trailing" constant="20" id="nan-hJ-BdV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="CmD-hA-mqw"/>
                                 <exclude reference="LCh-AO-3Gd"/>
+                                <exclude reference="tsl-qP-kRR"/>
+                                <exclude reference="PTx-qP-ZUE"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0r2-Kl-DCD"/>
                                 <exclude reference="0yu-Io-Tua"/>
+                                <exclude reference="WOc-AY-Ibi"/>
                                 <exclude reference="nan-hJ-BdV"/>
+                                <exclude reference="nIm-SQ-fsl"/>
+                                <exclude reference="4dW-c5-5bc"/>
+                                <exclude reference="fcc-h5-UnB"/>
                                 <exclude reference="FKB-Bl-4gC"/>
                                 <exclude reference="LaG-Ke-5qo"/>
                                 <exclude reference="MRl-IQ-N6y"/>
@@ -71,11 +104,17 @@
                             <mask key="subviews">
                                 <include reference="CmD-hA-mqw"/>
                                 <include reference="LCh-AO-3Gd"/>
+                                <include reference="tsl-qP-kRR"/>
+                                <include reference="PTx-qP-ZUE"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0r2-Kl-DCD"/>
                                 <include reference="0yu-Io-Tua"/>
+                                <include reference="WOc-AY-Ibi"/>
                                 <include reference="nan-hJ-BdV"/>
+                                <include reference="nIm-SQ-fsl"/>
+                                <include reference="4dW-c5-5bc"/>
+                                <include reference="fcc-h5-UnB"/>
                                 <include reference="FKB-Bl-4gC"/>
                                 <include reference="LaG-Ke-5qo"/>
                                 <include reference="MRl-IQ-N6y"/>
@@ -85,7 +124,11 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="5mq-0i-Til" id="jWe-X9-czM"/>
                         <outlet property="imagePickerView" destination="CmD-hA-mqw" id="112-g6-GDP"/>
+                        <outlet property="textBot" destination="tsl-qP-kRR" id="ZwM-Wx-i2x"/>
+                        <outlet property="textTop" destination="PTx-qP-ZUE" id="5UG-DT-Xs0"/>
+                        <outlet property="toolbar" destination="LCh-AO-3Gd" id="KN7-WE-Tcn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

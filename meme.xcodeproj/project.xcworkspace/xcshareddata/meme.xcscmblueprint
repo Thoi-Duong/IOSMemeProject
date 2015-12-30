@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6ADBEA3C4DB3087870183FC8377A0D6E7E950312",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6ADBEA3C4DB3087870183FC8377A0D6E7E950312" : 0,
+    "D15DC99B27373481AB939F41568A702FDADE3445" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BE3EC4B7-9F75-4940-8444-6DB0EB49C11E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6ADBEA3C4DB3087870183FC8377A0D6E7E950312" : "meme\/",
+    "D15DC99B27373481AB939F41568A702FDADE3445" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "meme",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "meme.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dnhthooi\/IOSMemeProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6ADBEA3C4DB3087870183FC8377A0D6E7E950312"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dnhthooi\/IOSPlaySounds.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D15DC99B27373481AB939F41568A702FDADE3445"
+    }
+  ]
+}
